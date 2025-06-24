@@ -92,7 +92,6 @@
         doctorContainer.style.opacity = 1;
       }, 500);
     });
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("chatModal");
   const trigger = document.getElementById("searchTrigger");
@@ -129,6 +128,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 600);
   });
 });
-</script>
 
   

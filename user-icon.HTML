@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile - CURE AI</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f9ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #00bcd4;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .profile-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-header img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h3 {
+      color: #00bcd4;
+      margin-bottom: 0.5rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .info-item {
+      background: #e0f7fa;
+      padding: 1rem;
+      border-radius: 12px;
+    }
+
+    .info-item strong {
+      display: block;
+      font-weight: bold;
+    }
+
+    .info-item input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      color: #888;
+    }
+
+    .back-img {
+      width: 5%;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background-color: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto 1rem auto;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #0097a7;
+    }
+
+    /* From Uiverse.io by adamgiebl */ 
+.neu-button {
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+}
+
+.neu-button:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>User Profile</h1>
+    <p>Your health info at a glance</p>
+  </header>
+
+  <div class="profile-container">
+    <a href="cureai-app.html" style="  text-decoration: none">
+<button class="neu-button">Back</button>
+    </a>
+
+    <form id="profileForm">
+      <div class="profile-header">
+        <img src="profile-pic.jpg" alt="User Photo" />
+        <div>
+          <h2><input type="text" name="name" value="Jane Doe" /></h2>
+          <p>Age: <input type="number" name="age" value="28" /> | Gender: 
+            <input type="text" name="gender" value="Female" />
+          </p>
+          <p>Email: <input type="email" name="email" value="jane.doe@example.com" /></p>
+        </div>
+      </div>
+
+      <!-- Medical Info -->
+      <div class="section">
+        <h3>Medical Information</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>Blood Type:</strong><input name="bloodType" /></div>
+          <div class="info-item"><strong>Allergies:</strong><input name="allergies" /></div>
+          <div class="info-item"><strong>Medications:</strong><input name="medications" /></div>
+          <div class="info-item"><strong>Chronic Conditions:</strong><input name="chronic" /></div>
+          <div class="info-item"><strong>Vaccination Status:</strong><input name="vaccination" /></div>
+          <div class="info-item"><strong>Insurance:</strong><input name="insurance" /></div>
+        </div>
+      </div>
+
+      <!-- Activity -->
+      <div class="section">
+        <h3>Activity & Goals</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>Steps Today:</strong><input name="steps" /></div>
+          <div class="info-item"><strong>Heart Rate:</strong><input name="heartRate" /></div>
+          <div class="info-item"><strong>Sleep:</strong><input name="sleep" /></div>
+          <div class="info-item"><strong>Diet:</strong><input name="diet" /></div>
+          <div class="info-item"><strong>Mental Check-in:</strong><input name="mental" /></div>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div class="section">
+        <h3>Settings</h3>
+        <div class="info-grid">
+          <div class="info-item"><strong>Theme:</strong><input name="theme" /></div>
+          <div class="info-item"><strong>Notifications:</strong><input name="notifications" /></div>
+          <div class="info-item"><strong>Connected Devices:</strong><input name="devices" /></div>
+          <div class="info-item"><strong>Emergency Contact:</strong><input name="emergency" /></div>
+        </div>
+      </div>
+
+      <button type="submit">Save Profile</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CURE AI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById("profileForm");
+
+    // Load saved data if exists
+    window.onload = () => {
+      const saved = localStorage.getItem("profileData");
+      if (saved) {
+        const data = JSON.parse(saved);
+        Object.entries(data).forEach(([key, value]) => {
+          const input = form.elements.namedItem(key);
+          if (input) input.value = value;
+        });
+      }
+    };
+
+    // Save on submit
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const profileData = {};
+      for (let [key, val] of formData.entries()) {
+        profileData[key] = val;
+      }
+      localStorage.setItem("profileData", JSON.stringify(profileData));
+      alert("Your profile has been saved! 🎉");
+    });
+  </script>
+</body>
+</html>
